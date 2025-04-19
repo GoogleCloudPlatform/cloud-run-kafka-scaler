@@ -180,7 +180,12 @@ resource "google_cloud_run_v2_service" "scaler_service" {
   project  = var.project_id
   location = var.region
   name     = var.scaler_service_name
-  labels   = var.additional_labels
+  labels   = merge(
+    {
+      "created-by" = "scaler-kafka"
+    },
+    var.additional_labels
+  )
   deletion_protection = false
 
   # Ensure that IAM bindings involving the SA exist, before creating the service that uses it

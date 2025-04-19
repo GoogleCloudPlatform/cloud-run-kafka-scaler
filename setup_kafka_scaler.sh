@@ -189,6 +189,7 @@ gcloud run deploy $SCALER_SERVICE_NAME \
     --max-instances=1 \
     --update-secrets=/kafka-config/kafka-client-properties=$ADMIN_CLIENT_SECRET:latest \
     --update-secrets=/scaler-config/scaling=$SCALER_CONFIG_SECRET:latest \
+    --labels=created-by=scaler-kafka
     --env-vars-file=scaler_env_vars.yaml
 
 # Grant Tasks service account Cloud Run Invoker on the Kafka autoscaler
