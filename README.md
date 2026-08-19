@@ -1,5 +1,14 @@
 # Cloud Run Kafka Autoscaler
 
+![status: inactive](https://img.shields.io/badge/status-inactive-red.svg)
+
+> [!WARNING]
+> 
+> **This project is no longer actively developed or maintained.**
+> 
+> Please check out [cloud-run-external-metrics-autoscaling](https://github.com/GoogleCloudPlatform/cloud-run-external-metrics-autoscaling) if you'd like to scale your Kafka consumers running on GCP Cloud Run.
+
+
 This repository contains the source code for a buildable container image of an
 autoscaler that horizontally autoscales Kafka consumers, running on Cloud Run,
 based on consumer lag and CPU utilization. The autoscaler reads metrics from
